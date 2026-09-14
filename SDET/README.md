@@ -40,7 +40,7 @@ You may:
 * use parametrized tests;
 * create temporary files using pytest utilities such as `tmp_path`.
 
-All tests should execute the application through the CLI.
+All tests must execute the application through the CLI.
 Treat `task_stats.py` as a black-box command-line tool; you do not need to read
 or import the application code.
 
@@ -115,10 +115,10 @@ error message to `stderr`.
 The provided file must:
 
 * exist;
-* contain a valid JSON;
+* contain valid JSON;
 * contain a JSON array as its root element.
 
-Each item in the array must be a **Task** object with the following fields:
+Each item in the array must be a task object with the following fields:
 
 * `id`: required; an integer identifier;
 * `status`: required; a string containing one of the supported status values.

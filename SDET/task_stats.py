@@ -27,6 +27,9 @@ def load_tasks(path):
 
         status = task.get("status", "pending")
 
+        if not isinstance(status, str):
+            raise ValueError("Invalid status")
+
         if status not in ALLOWED_STATUSES:
             raise ValueError("Invalid status")
 
