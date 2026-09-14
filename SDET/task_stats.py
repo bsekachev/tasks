@@ -10,7 +10,7 @@ def count_tasks(tasks, status):
     return sum(
         1
         for task in tasks
-        if task.get("status", "").lower() == status.lower()
+        if task.get("status") == status
     )
 
 
